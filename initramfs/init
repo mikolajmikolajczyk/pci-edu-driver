@@ -1,0 +1,15 @@
+#!/bin/sh
+
+sleep 0.2
+
+mount -t proc none /proc
+mount -t sysfs none /sys
+echo "Initramfs booted"
+insmod /edu_drv.ko
+
+minor=$(awk '$2=="edu" {print $1}' /proc/misc)
+mknod /dev/edu c 10 $minor
+chmod 666 /dev/edu
+echo "/dev/edu created with minor $minor"
+
+exec /bin/sh

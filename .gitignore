@@ -1,0 +1,62 @@
+# BusyBox build artifacts
+_busybox/
+busybox-*/
+.busybox_build/
+rootfs/
+# Linux kernel build
+linux-*/
+*.o
+*.ko
+*.mod.c
+*.mod
+*.cmd
+.tmp_versions/
+Module.symvers
+modules.order
+System.map
+bzImage
+vmlinux
+vmlinuz
+arch/x86/boot/bzImage
+arch/*/boot/compressed/*.o
+
+# Initramfs build output
+initramfs.cpio
+initramfs.cpio.gz
+initrd.img
+_initramfs/
+
+# busybox archive
+busybox-*.tar*
+
+
+# Build directories
+_build/
+out/
+output/
+build/
+buildroot/
+
+# QEMU run-time
+*.img
+*.qcow2
+*.log
+*.pid
+*.sock
+
+# Editors & system
+*~
+*.swp
+.DS_Store
+.vscode/
+*.tags
+tags
+
+# Kernel
+
+kernel/linux-*
+kernel/linux
+
+# User
+
+user/edu_cli
